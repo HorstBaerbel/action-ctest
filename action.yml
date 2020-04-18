@@ -1,0 +1,31 @@
+name: 'action-ctest'
+description: 'Run unit tests using CTest'
+author: 'HorstBaerbel / Bim Overbohm'
+branding:
+  icon: check-circle
+  color: gray-dark
+inputs:
+  sourcedir:
+    description: 'Source directory'
+    required: false
+    default: '.'
+  builddir:
+    description: 'Build directory'
+    required: false
+    default: 'build'
+  cmakeoptions:
+    description: 'Additional options to pass to cmake'
+    required: false
+    default: '--config Release'
+  ctestoptions:
+    description: 'Additional options to pass to ctest'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.sourcedir }}
+    - ${{ inputs.builddir }}
+    - ${{ inputs.cmakeoptions }}
+    - ${{ inputs.ctestoptions }}
