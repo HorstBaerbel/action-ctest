@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Builds a repository using CMake, then runs unit tests using [CTest](https://cmake.org/cmake/help/latest/manual/ctest.1.html).
+Builds a repository using [CMake](https://cmake.org/), then runs unit tests using [CTest](https://cmake.org/cmake/help/latest/manual/ctest.1.html).
 
 If you find a bug or make an improvement your pull requests are appreciated.
 
